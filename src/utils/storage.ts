@@ -8,7 +8,6 @@ const STORAGE_KEYS = {
   FAVORITES: 'arc_raiders_favorites',
   DECISION_FILTERS: 'arc_raiders_decision_filters',
   CATEGORY_FILTERS: 'arc_raiders_category_filters',
-  PVP_GATE: 'arc_raiders_pvp_gate',
   VIEW_MODE: 'arc_raiders_view_mode',
   SIDEBAR_HIDDEN: 'arc_raiders_sidebar_hidden',
   QUEST_SHOW_NON_ITEM: 'arc_raiders_quest_show_non_item'
@@ -237,26 +236,6 @@ export class StorageManager {
       localStorage.setItem(STORAGE_KEYS.CATEGORY_FILTERS, JSON.stringify(obj));
     } catch (error) {
       console.error('Failed to save category filters:', error);
-    }
-  }
-
-  static getPvPGateAnswer(): number | null {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEYS.PVP_GATE);
-      if (stored) {
-        return JSON.parse(stored) as number;
-      }
-    } catch (error) {
-      console.error('Failed to load PvP gate answer:', error);
-    }
-    return null;
-  }
-
-  static setPvPGateAnswer(answer: number): void {
-    try {
-      localStorage.setItem(STORAGE_KEYS.PVP_GATE, JSON.stringify(answer));
-    } catch (error) {
-      console.error('Failed to save PvP gate answer:', error);
     }
   }
 
