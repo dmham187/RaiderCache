@@ -443,5 +443,56 @@
     "imageFilename": "https://cdn.arctracker.io/items/v2/frigate_inductor.png",
     "updatedAt": "11/10/2026",
     "addedIn": "extension"
+  },
+  {
+    "id": "arc_conductive_coupler",
+    "name": {
+      "en": "ARC Conductive Coupler"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Topside Material",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/arc_conductive_coupler.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "broken_compass",
+    "name": {
+      "en": "Broken Compass"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Trinket",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/broken_compass.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "project_pathos_empathy_core",
+    "name": {
+      "en": "Project Pathos Empathy Core"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Topside Material",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/project_pathos_empathy_core.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
   }
 ]
