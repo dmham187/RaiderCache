@@ -1,9 +1,9 @@
 name: Update Game Data
 
 on:
-  # schedule:
-  #   # Run daily at 6 AM UTC
-  #   - cron: '0 6 * * *'
+  schedule:
+    # Run daily at 6 AM UTC
+    - cron: '0 6 * * *'
   workflow_dispatch: # Allow manual trigger
 
 permissions:
@@ -30,7 +30,10 @@ jobs:
         run: npm ci
 
       - name: Fetch latest game data
-        run: npm run fetch-data
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        # Maps/tiles come from MetaForge and change rarely; skip them so a MetaForge outage cannot break the sync.
+        run: npm run fetch-data-quick
 
       - name: Validate data
         run: npm run validate-data

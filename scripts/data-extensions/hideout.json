@@ -1,0 +1,93 @@
+[
+  {
+    "id": "weapon_bench",
+    "maxLevel": 4,
+    "levels": [
+      {
+        "level": 4,
+        "description": "Requires Outpost level 4. Unlocks weapon amplification (level 5 weapons).",
+        "requirementItemIds": [
+          {
+            "item_id": "radial_press",
+            "quantity": 3
+          },
+          {
+            "item_id": "magnetic_accelerator",
+            "quantity": 3
+          },
+          {
+            "item_id": "emperor_modulator",
+            "quantity": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "outpost",
+    "name": {
+      "en": "Outpost"
+    },
+    "maxLevel": 4,
+    "levels": [
+      {
+        "level": 1,
+        "description": "Unlocked by the Sheltered Retreat project.",
+        "requirementItemIds": []
+      },
+      {
+        "level": 2,
+        "description": "Unlocks Research Station level II.",
+        "requirementItemIds": [
+          {
+            "item_id": "steel_cable",
+            "quantity": 3
+          },
+          {
+            "item_id": "sheet_metal",
+            "quantity": 20
+          },
+          {
+            "item_id": "cable_stripper",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "requirementItemIds": [
+          {
+            "item_id": "epoxy_bucket",
+            "quantity": 3
+          },
+          {
+            "item_id": "planks",
+            "quantity": 35
+          },
+          {
+            "item_id": "hand_drill",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "description": "Unlocks Gunsmith and Research Station level IV.",
+        "requirementItemIds": [
+          {
+            "item_id": "sheet_metal",
+            "quantity": 40
+          },
+          {
+            "item_id": "laser_level",
+            "quantity": 3
+          },
+          {
+            "item_id": "insulation_roll",
+            "quantity": 3
+          }
+        ]
+      }
+    ]
+  }
+]

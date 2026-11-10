@@ -1,0 +1,91 @@
+[
+  {
+    "id": "souls_offering_project",
+    "name": {
+      "en": "Soul's Offering"
+    },
+    "description": "Limited-time project (update 2.3.0). Ends November 16, 2026.",
+    "phases": [
+      {
+        "phase": 1,
+        "name": {
+          "en": "Vaulto's Offering"
+        },
+        "requirementItemIds": [
+          {
+            "item_id": "dead_flowers",
+            "quantity": 1
+          },
+          {
+            "item_id": "rock_salt",
+            "quantity": 2
+          },
+          {
+            "item_id": "arc_alloy",
+            "quantity": 15
+          },
+          {
+            "item_id": "expired_respirator",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "name": {
+          "en": "Ferrovia's Offering"
+        },
+        "requirementItemIds": [
+          {
+            "item_id": "dead_flowers",
+            "quantity": 3
+          },
+          {
+            "item_id": "railway_lantern",
+            "quantity": 2
+          },
+          {
+            "item_id": "advanced_arc_powercell",
+            "quantity": 15
+          },
+          {
+            "item_id": "remote_raider_flare",
+            "quantity": 10
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "name": {
+          "en": "Murteta's Offering"
+        },
+        "requirementItemIds": [
+          {
+            "item_id": "fancy_plate",
+            "quantity": 2
+          },
+          {
+            "item_id": "mask_fragment",
+            "quantity": 1
+          },
+          {
+            "item_id": "insulation_roll",
+            "quantity": 1
+          },
+          {
+            "item_id": "fertilizer",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "name": {
+          "en": "Honor the Fallen"
+        },
+        "requirementItemIds": []
+      }
+    ],
+    "expiresAt": "2026-11-17T00:00:00Z"
+  }
+]
