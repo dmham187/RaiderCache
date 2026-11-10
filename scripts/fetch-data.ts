@@ -1634,6 +1634,19 @@ function applyItemExtensions(
   return added;
 }
 
+
+function applyQuestExtensions(quests: any[]): number {
+  const known = new Set(quests.map(quest => quest.id));
+  let added = 0;
+  loadExtension<any>('quests.json').forEach((raw) => {
+    if (!raw || typeof raw.id !== 'string' || known.has(raw.id)) return; // upstream wins
+    quests.push(mapRaidTheoryQuestToOurFormat(raw, quests.length));
+    known.add(raw.id);
+    added++;
+  });
+  return added;
+}
+
 function applyProjectExtensions(projects: ProjectData[]): number {
   const known = new Set(projects.map(project => project.id));
   let added = 0;
@@ -1698,6 +1711,8 @@ async function main() {
 
   // Fetch quests from RaidTheory
   const mappedQuests = await fetchRaidTheoryQuests();
+  const extraQuests = applyQuestExtensions(mappedQuests);
+  if (extraQuests > 0) console.log(`➕ Added ${extraQuests} quests from data-extensions`);
 
   // Save quests.json
   console.log('\n💾 Saving quests.json...');

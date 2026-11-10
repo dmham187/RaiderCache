@@ -1,0 +1,272 @@
+[
+  {
+    "id": "sizing_things_up",
+    "name": {
+      "en": "Sizing Things Up"
+    },
+    "trader": "Celeste",
+    "requiredItemIds": [
+      {
+        "itemId": "arc_conductive_coupler",
+        "quantity": 1
+      }
+    ],
+    "description": {
+      "en": "Hand in an ARC Conductive Coupler. (Frozen Trail quest, provisional entry: items from community guides, rewards and XP not included.)"
+    },
+    "objectives": [],
+    "updatedAt": "11/10/2026"
+  },
+  {
+    "id": "tracks_of_the_beast",
+    "name": {
+      "en": "Tracks Of The Beast"
+    },
+    "trader": "Shani",
+    "requiredItemIds": [
+      {
+        "itemId": "skulker_targeter",
+        "quantity": 1
+      }
+    ],
+    "description": {
+      "en": "Optional step: hand in a Skulker Targeter. (Frozen Trail quest, provisional entry: items from community guides, rewards and XP not included.)"
+    },
+    "objectives": [],
+    "updatedAt": "11/10/2026"
+  },
+  {
+    "id": "bait_fetch_blast",
+    "name": {
+      "en": "Bait, Fetch, Blast"
+    },
+    "trader": "Apollo",
+    "requiredItemIds": [
+      {
+        "itemId": "bully_fragmenter",
+        "quantity": 1
+      }
+    ],
+    "description": {
+      "en": "Hand in a Bully Fragmenter. (Frozen Trail quest, provisional entry: items from community guides, rewards and XP not included.)"
+    },
+    "objectives": [],
+    "updatedAt": "11/10/2026"
+  },
+  {
+    "id": "nothing_ventured",
+    "name": {
+      "en": "Nothing Ventured"
+    },
+    "trader": "Apollo",
+    "requiredItemIds": [
+      {
+        "itemId": "comet_igniter",
+        "quantity": 3
+      },
+      {
+        "itemId": "rocketeer_driver",
+        "quantity": 3
+      },
+      {
+        "itemId": "arc_circuitry",
+        "quantity": 6
+      },
+      {
+        "itemId": "arc_motion_core",
+        "quantity": 6
+      }
+    ],
+    "description": {
+      "en": "Hand in ARC parts. (Frozen Trail quest, provisional entry: items from community guides, rewards and XP not included.)"
+    },
+    "objectives": [],
+    "updatedAt": "11/10/2026"
+  },
+  {
+    "id": "nothing_gained",
+    "name": {
+      "en": "Nothing Gained"
+    },
+    "trader": "Apollo",
+    "requiredItemIds": [
+      {
+        "itemId": "queen_reactor",
+        "quantity": 1
+      },
+      {
+        "itemId": "matriarch_reactor",
+        "quantity": 1
+      }
+    ],
+    "description": {
+      "en": "Hand in a Queen Reactor and a Matriarch Reactor. (Frozen Trail quest, provisional entry: items from community guides, rewards and XP not included.)"
+    },
+    "objectives": [],
+    "updatedAt": "11/10/2026"
+  },
+  {
+    "id": "clean_hands",
+    "name": {
+      "en": "Clean Hands"
+    },
+    "trader": "Nomadic Envoy",
+    "requiredItemIds": [
+      {
+        "itemId": "equatorial_sundial",
+        "quantity": 1
+      }
+    ],
+    "description": {
+      "en": "Keep the Equatorial Sundial. Selling or losing it makes the quest impossible to finish. (Frozen Trail quest, provisional entry: items from community guides, rewards and XP not included.)"
+    },
+    "objectives": [],
+    "updatedAt": "11/10/2026"
+  },
+  {
+    "id": "taking_stock",
+    "name": {
+      "en": "Taking Stock"
+    },
+    "trader": "Nomadic Envoy",
+    "requiredItemIds": [
+      {
+        "itemId": "industrial_battery",
+        "quantity": 3
+      }
+    ],
+    "description": {
+      "en": "Hand in Industrial Batteries. (Frozen Trail quest, provisional entry: items from community guides, rewards and XP not included.)"
+    },
+    "objectives": [],
+    "updatedAt": "11/10/2026"
+  },
+  {
+    "id": "a_path_not_yours",
+    "name": {
+      "en": "A Path Not Yours"
+    },
+    "trader": "Nomadic Envoy",
+    "requiredItemIds": [
+      {
+        "itemId": "broken_compass",
+        "quantity": 1
+      }
+    ],
+    "description": {
+      "en": "Hand in a Broken Compass. (Frozen Trail quest, provisional entry: items from community guides, rewards and XP not included.)"
+    },
+    "objectives": [],
+    "updatedAt": "11/10/2026"
+  },
+  {
+    "id": "empathetic_prototypes",
+    "name": {
+      "en": "Empathetic Prototypes"
+    },
+    "trader": "Lance",
+    "requiredItemIds": [
+      {
+        "itemId": "project_pathos_empathy_core",
+        "quantity": 1
+      }
+    ],
+    "description": {
+      "en": "Hand in a Project Pathos Empathy Core. (Frozen Trail quest, provisional entry: items from community guides, rewards and XP not included.)"
+    },
+    "objectives": [],
+    "updatedAt": "11/10/2026"
+  },
+  {
+    "id": "to_the_skies",
+    "name": {
+      "en": "To The Skies"
+    },
+    "trader": "Apollo",
+    "requiredItemIds": [
+      {
+        "itemId": "arc_performance_steel",
+        "quantity": 1
+      },
+      {
+        "itemId": "pop_trigger",
+        "quantity": 1
+      },
+      {
+        "itemId": "arc_synthetic_resin",
+        "quantity": 1
+      },
+      {
+        "itemId": "arc_thermo_lining",
+        "quantity": 1
+      }
+    ],
+    "description": {
+      "en": "Install parts into a Gondola Prototype. Quantities are not confirmed (1 each assumed). (Frozen Trail quest, provisional entry: items from community guides, rewards and XP not included.)"
+    },
+    "objectives": [],
+    "updatedAt": "11/10/2026"
+  },
+  {
+    "id": "wires_crossed",
+    "name": {
+      "en": "Wires Crossed"
+    },
+    "trader": "Celeste",
+    "requiredItemIds": [
+      {
+        "itemId": "snitch_scanner",
+        "quantity": 1
+      },
+      {
+        "itemId": "surveyor_vault",
+        "quantity": 1
+      },
+      {
+        "itemId": "sentinel_firing_core",
+        "quantity": 1
+      }
+    ],
+    "description": {
+      "en": "Attach one part to each of three antennas. (Frozen Trail quest, provisional entry: items from community guides, rewards and XP not included.)"
+    },
+    "objectives": [],
+    "updatedAt": "11/10/2026"
+  },
+  {
+    "id": "ruins_and_reverberations",
+    "name": {
+      "en": "Ruins And Reverberations"
+    },
+    "trader": "Celeste",
+    "requiredItemIds": [
+      {
+        "itemId": "spotter_relay",
+        "quantity": 1
+      }
+    ],
+    "description": {
+      "en": "Connect a Spotter Relay to the antenna on the Observatory roof. (Frozen Trail quest, provisional entry: items from community guides, rewards and XP not included.)"
+    },
+    "objectives": [],
+    "updatedAt": "11/10/2026"
+  },
+  {
+    "id": "exploring_pendola_pass",
+    "name": {
+      "en": "Exploring Pendola Pass"
+    },
+    "trader": "Celeste",
+    "requiredItemIds": [
+      {
+        "itemId": "wires",
+        "quantity": 1
+      }
+    ],
+    "description": {
+      "en": "Use Wires on the antenna atop the Railyard tower. (Frozen Trail quest, provisional entry: items from community guides, rewards and XP not included.)"
+    },
+    "objectives": [],
+    "updatedAt": "11/10/2026"
+  }
+]
