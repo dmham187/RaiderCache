@@ -89,5 +89,86 @@
         ]
       }
     ]
+  },
+  {
+    "id": "research_station",
+    "name": {
+      "en": "Research Station"
+    },
+    "maxLevel": 4,
+    "levels": [
+      {
+        "level": 1,
+        "description": "Requires Outpost level 1.",
+        "requirementItemIds": [
+          {
+            "item_id": "planks",
+            "quantity": 35
+          },
+          {
+            "item_id": "battered_paperback",
+            "quantity": 5
+          },
+          {
+            "item_id": "mini_pump",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "description": "Requires Outpost level 2.",
+        "requirementItemIds": [
+          {
+            "item_id": "calculator",
+            "quantity": 3
+          },
+          {
+            "item_id": "raider_logbook",
+            "quantity": 3
+          },
+          {
+            "item_id": "skulker_targeter",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "description": "Requires Outpost level 3.",
+        "requirementItemIds": [
+          {
+            "item_id": "differential_microphone",
+            "quantity": 3
+          },
+          {
+            "item_id": "exodus_technical_handbook",
+            "quantity": 3
+          },
+          {
+            "item_id": "bully_fragmenter",
+            "quantity": 6
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "description": "Requires Outpost level 4. Unlocks Amplified research.",
+        "requirementItemIds": [
+          {
+            "item_id": "thermal_shaker",
+            "quantity": 3
+          },
+          {
+            "item_id": "arc_data_module",
+            "quantity": 3
+          },
+          {
+            "item_id": "frigate_inductor",
+            "quantity": 1
+          }
+        ]
+      }
+    ]
   }
 ]
