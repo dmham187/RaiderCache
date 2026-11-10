@@ -26,6 +26,35 @@ const GITHUB_FETCH_TIMEOUT_MS = 15000;
 const GITHUB_FETCH_RETRIES = 3;
 const SKIP_MAP_FETCHES = process.argv.includes('--skip-maps');
 
+const EXTENSIONS_DIR = path.join(process.cwd(), 'scripts', 'data-extensions');
+
+function githubHeaders(): Record<string, string> {
+  const headers: Record<string, string> = {
+    'Accept': 'application/vnd.github+json',
+    'User-Agent': 'RaiderCache-Fetcher'
+  };
+  // Authenticated requests avoid the low unauthenticated rate limit on shared CI runners.
+  const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+  return headers;
+}
+
+function loadExtension<T>(fileName: string): T[] {
+  const filePath = path.join(EXTENSIONS_DIR, fileName);
+  if (!fs.existsSync(filePath)) {
+    return [];
+  }
+  try {
+    const parsed = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (error) {
+    console.warn(`⚠️  Could not read extension ${fileName}: ${error}`);
+    return [];
+  }
+}
+
 // Ensure directories exist
 [PUBLIC_DIR, DATA_DIR, STATIC_DATA_DIR, ICONS_DIR, MAPS_DIR, TILES_DIR].forEach(dir => {
   if (!fs.existsSync(dir)) {
@@ -627,10 +656,7 @@ async function fetchRaidTheoryHideoutModules(): Promise<HideoutModuleData[]> {
       const entries = await fetchJSONWithTimeout<GitHubContentEntry[]>(
         RAIDTHEORY_HIDEOUT_CONTENTS_URL,
         GITHUB_FETCH_TIMEOUT_MS,
-        {
-          'Accept': 'application/vnd.github+json',
-          'User-Agent': 'RaiderCache-Fetcher'
-        }
+        githubHeaders()
       );
 
       const hideoutFiles = entries
@@ -710,10 +736,7 @@ async function fetchRaidTheoryItems(
       const entries = await fetchJSONWithTimeout<GitHubContentEntry[]>(
         RAIDTHEORY_ITEMS_CONTENTS_URL,
         GITHUB_FETCH_TIMEOUT_MS,
-        {
-          'Accept': 'application/vnd.github+json',
-          'User-Agent': 'RaiderCache-Fetcher'
-        }
+        githubHeaders()
       );
 
       const itemFiles = entries
@@ -848,10 +871,7 @@ async function fetchRaidTheoryQuests(): Promise<any[]> {
       const entries = await fetchJSONWithTimeout<GitHubContentEntry[]>(
         RAIDTHEORY_QUESTS_CONTENTS_URL,
         GITHUB_FETCH_TIMEOUT_MS,
-        {
-          'Accept': 'application/vnd.github+json',
-          'User-Agent': 'RaiderCache-Fetcher'
-        }
+        githubHeaders()
       );
 
       const questFiles = entries
@@ -1587,6 +1607,60 @@ async function calculateMapExtents(): Promise<void> {
   console.log(`\n✅ Map extents saved to ${configPath}`);
 }
 
+
+function applyItemExtensions(
+  items: any[],
+  craftingMap: Map<string, Record<string, number>>,
+  recycleMap: Map<string, Record<string, number>>
+): number {
+  const known = new Set(items.map(item => item.id));
+  let added = 0;
+  for (const raw of loadExtension<RaidTheoryItem>('items.json')) {
+    if (!raw || typeof raw.id !== 'string') continue;
+    const mapped = mapRaidTheoryItemToOurFormat(raw, craftingMap, recycleMap);
+    if (known.has(mapped.id)) continue; // upstream wins once it has the item
+    items.push(mapped);
+    known.add(mapped.id);
+    added++;
+  }
+  return added;
+}
+
+function applyProjectExtensions(projects: ProjectData[]): number {
+  const known = new Set(projects.map(project => project.id));
+  let added = 0;
+  loadExtension<any>('projects.json').forEach((raw, index) => {
+    // Time-limited projects drop out automatically after their expiry date.
+    if (raw?.expiresAt && Date.now() > Date.parse(raw.expiresAt)) return;
+    const mapped = mapRaidTheoryProjectToOurFormat(raw, projects.length + index);
+    if (known.has(mapped.id)) return;
+    projects.push(mapped);
+    known.add(mapped.id);
+    added++;
+  });
+  return added;
+}
+
+function applyHideoutExtensions(modules: HideoutModuleData[]): number {
+  let changes = 0;
+  loadExtension<any>('hideout.json').forEach((raw, index) => {
+    const mapped = mapRaidTheoryHideoutToOurFormat(raw, modules.length + index);
+    const existing = modules.find(module => module.id === mapped.id);
+    if (!existing) {
+      modules.push(mapped);
+      changes++;
+      return;
+    }
+    const currentMax = existing.levels.reduce((max, level) => Math.max(max, level.level), 0);
+    const newLevels = mapped.levels.filter(level => level.level > currentMax);
+    if (newLevels.length === 0) return; // upstream already has these levels
+    existing.levels.push(...newLevels);
+    existing.maxLevel = Math.max(existing.maxLevel, mapped.maxLevel, ...newLevels.map(level => level.level));
+    changes += newLevels.length;
+  });
+  return changes;
+}
+
 async function main() {
   console.log('🚀 Fetching Arc Raiders data...\n');
   if (SKIP_MAP_FETCHES) {
@@ -1603,6 +1677,8 @@ async function main() {
 
   // Fetch and map items from RaidTheory (fallback to Supabase recipe/recycle maps when absent)
   const mappedItems = await fetchRaidTheoryItems(craftingMap, recycleMap);
+  const extraItems = applyItemExtensions(mappedItems, craftingMap, recycleMap);
+  if (extraItems > 0) console.log(`➕ Added ${extraItems} items from data-extensions`);
 
   // Save items.json
   console.log('\n💾 Saving items.json...');
@@ -1631,6 +1707,9 @@ async function main() {
     console.warn(`⚠️  RaidTheory projects fetch failed: ${error}`);
   }
 
+  const extraProjects = applyProjectExtensions(mappedProjects);
+  if (extraProjects > 0) console.log(`➕ Added ${extraProjects} projects from data-extensions`);
+
   console.log('\n💾 Saving projects.json...');
   fs.writeFileSync(
     path.join(DATA_DIR, 'projects.json'),
@@ -1640,6 +1719,8 @@ async function main() {
 
   // Fetch and combine hideout modules from all RaidTheory hideout JSON files
   const mappedHideoutModules = await fetchRaidTheoryHideoutModules();
+  const extraHideout = applyHideoutExtensions(mappedHideoutModules);
+  if (extraHideout > 0) console.log(`➕ Applied ${extraHideout} hideout changes from data-extensions`);
 
   console.log('\n💾 Saving hideoutModules.json...');
   fs.writeFileSync(
@@ -1780,7 +1861,7 @@ async function main() {
   const metadata = {
     lastUpdated: new Date().toISOString(),
     source: 'https://api.github.com/repos/RaidTheory/arcraiders-data/contents/items (items), https://api.github.com/repos/RaidTheory/arcraiders-data/contents/quests (quests), https://metaforge.app/arc-raiders (maps), https://raw.githubusercontent.com/RaidTheory/arcraiders-data/refs/heads/main/projects.json (projects), https://api.github.com/repos/RaidTheory/arcraiders-data/contents/hideout (hideout modules)',
-    staticSource: 'Local static files (projects fallback only)',
+    staticSource: 'Local static files (projects fallback only); manual additions in scripts/data-extensions',
     version: '2.2.0',
     itemCount: mappedItems.length,
     questCount: mappedQuests.length,

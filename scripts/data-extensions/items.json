@@ -1,0 +1,260 @@
+[
+  {
+    "id": "dead_flowers",
+    "name": {
+      "en": "Dead Flowers"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Trinket",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/dead_flowers.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "rock_salt",
+    "name": {
+      "en": "Rock Salt"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Trinket",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/rock_salt.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "railway_lantern",
+    "name": {
+      "en": "Railway Lantern"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Trinket",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/railway_lantern.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "fancy_plate",
+    "name": {
+      "en": "Fancy Plate"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Trinket",
+    "value": 7000,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/fancy_plate.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension",
+    "rarity": "Epic"
+  },
+  {
+    "id": "mask_fragment",
+    "name": {
+      "en": "Mask Fragment"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Trinket",
+    "value": 7000,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/mask_fragment.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension",
+    "rarity": "Epic"
+  },
+  {
+    "id": "insulation_roll",
+    "name": {
+      "en": "Insulation Roll"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Recyclable",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/insulation_roll.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "radial_press",
+    "name": {
+      "en": "Radial Press"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Refined Material",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/radial_press.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "emperor_modulator",
+    "name": {
+      "en": "Emperor Modulator"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Topside Material",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/emperor_modulator.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension",
+    "rarity": "Legendary"
+  },
+  {
+    "id": "sheet_metal",
+    "name": {
+      "en": "Sheet Metal"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Basic Material",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/sheet_metal.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "planks",
+    "name": {
+      "en": "Planks"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Basic Material",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/planks.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "steel_cable",
+    "name": {
+      "en": "Steel Cable"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Recyclable",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/steel_cable.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "cable_stripper",
+    "name": {
+      "en": "Cable Stripper"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Recyclable",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/cable_stripper.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "epoxy_bucket",
+    "name": {
+      "en": "Epoxy Bucket"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Recyclable",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/epoxy_bucket.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "hand_drill",
+    "name": {
+      "en": "Hand Drill"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Recyclable",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/hand_drill.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "laser_level",
+    "name": {
+      "en": "Laser Level"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Recyclable",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/laser_level.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  }
+]
