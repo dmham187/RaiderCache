@@ -256,5 +256,192 @@
     "imageFilename": "https://cdn.arctracker.io/items/v2/laser_level.png",
     "updatedAt": "11/10/2026",
     "addedIn": "extension"
+  },
+  {
+    "id": "mini_pump",
+    "name": {
+      "en": "Mini Pump"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Recyclable",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/mini_pump.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "battered_paperback",
+    "name": {
+      "en": "Battered Paperback"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Recyclable",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/battered_paperback.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "calculator",
+    "name": {
+      "en": "Calculator"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Recyclable",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/calculator.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "raider_logbook",
+    "name": {
+      "en": "Raider Logbook"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Recyclable",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/raider_logbook.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "skulker_targeter",
+    "name": {
+      "en": "Skulker Targeter"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Topside Material",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/skulker_targeter.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "differential_microphone",
+    "name": {
+      "en": "Differential Microphone"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Recyclable",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/differential_microphone.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "exodus_technical_handbook",
+    "name": {
+      "en": "Exodus Technical Handbook"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Recyclable",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/exodus_technical_handbook.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "bully_fragmenter",
+    "name": {
+      "en": "Bully Fragmenter"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Topside Material",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/bully_fragmenter.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "thermal_shaker",
+    "name": {
+      "en": "Thermal Shaker"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Recyclable",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/thermal_shaker.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "arc_data_module",
+    "name": {
+      "en": "ARC Data Module"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Topside Material",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/arc_data_module.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
+  },
+  {
+    "id": "frigate_inductor",
+    "name": {
+      "en": "Frigate Inductor"
+    },
+    "description": {
+      "en": "Provisional entry: not in the upstream data yet. Name and use are known; rarity, value and weight may be incomplete."
+    },
+    "type": "Topside Material",
+    "value": 0,
+    "weightKg": 0,
+    "stackSize": 1,
+    "foundIn": "",
+    "imageFilename": "https://cdn.arctracker.io/items/v2/frigate_inductor.png",
+    "updatedAt": "11/10/2026",
+    "addedIn": "extension"
   }
 ]
