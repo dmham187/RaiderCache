@@ -609,6 +609,12 @@ function expeditionNumber(id: string): number {
   return match[1] !== undefined ? Number(match[1]) : 0;
 }
 
+function isProjectExpired(project: any, now: number = Date.now()): boolean {
+  if (project?.disabled === true) return true;
+  const endDate = Number(project?.endDate); // epoch seconds in the RaidTheory data
+  return Number.isFinite(endDate) && endDate > 0 && endDate * 1000 < now;
+}
+
 function keepOnlyHighestExpedition(projects: ProjectData[]): ProjectData[] {
   const expeditions = projects.filter(p => expeditionNumber(p.id) >= 0);
   if (expeditions.length === 0) return projects;
@@ -630,9 +636,11 @@ async function fetchRaidTheoryProjects(): Promise<ProjectData[]> {
         throw new Error('Invalid projects payload shape');
       }
 
-      const mappedProjects = payload.map(mapRaidTheoryProjectToOurFormat);
+      const activeProjects = payload.filter(project => !isProjectExpired(project));
+      console.log(`  ⏳ Dropped ${payload.length - activeProjects.length} expired or disabled projects`);
+      const mappedProjects = activeProjects.map(mapRaidTheoryProjectToOurFormat);
       const filteredProjects = keepOnlyHighestExpedition(mappedProjects);
-      console.log(`✅ Fetched ${filteredProjects.length} projects from RaidTheory (kept highest expedition only)`);
+      console.log(`✅ Fetched ${filteredProjects.length} active projects from RaidTheory`);
       return filteredProjects;
     } catch (error) {
       lastError = error;
